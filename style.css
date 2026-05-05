@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe6e6; /* Soft pink background */
+    font-family: 'Poppins', sans-serif;
+}
+.watermark {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #ff4d6d;
+    opacity: 0.6; /* Makes it look like a subtle watermark */
+    letter-spacing: 1px;
+    pointer-events: none; /* This ensures it doesn't block clicks */
+    z-index: 1000;
+}
+
+.question-container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 200px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.local-gif {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.question {
+    color: #ff4d6d;
+    margin-bottom: 20px;
+}
+
+/* Update your button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Keeps them vertically aligned */
+    gap: 50px;
+    height: 80px; /* Give it a fixed height so the box doesn't collapse */
+}
+
+/* Remove 'position: absolute' from the base CSS */
+#no-btn {
+    background-color: #487b86;
+    color: rgb(211, 157, 228);
+    transition: all 0.2s ease; /* Smooths out the "jump" */
+    z-index: 999;
+}
