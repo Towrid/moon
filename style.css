@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #ffe6e6; /* হালকা গোলাপি ব্যাকগ্রাউন্ড */
+    background-color: #ffe6e6;
     font-family: 'Poppins', sans-serif;
     overflow: hidden; /* বাটন স্ক্রিনের বাইরে গেলে স্ক্রল বার যেন না আসে */
 }
@@ -27,7 +27,7 @@ body {
     text-align: center;
     background: white;
     padding: 2rem;
-    border-radius: 30px; /* কর্নারগুলো বেশি গোল করলে দেখতে সুন্দর লাগে */
+    border-radius: 30px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     z-index: 10;
 }
@@ -35,7 +35,7 @@ body {
 .local-gif {
     width: 200px;
     margin-bottom: 20px;
-    pointer-events: none; /* যাতে জিআইএফ এর ওপর ক্লিক না লাগে */
+    pointer-events: none;
 }
 
 .question {
@@ -44,12 +44,14 @@ body {
     font-size: 1.5rem;
 }
 
+/* বাটন কন্টেইনার */
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     height: 80px;
+    position: relative; /* বাটনগুলোর পজিশন ঠিক রাখার জন্য */
 }
 
 .btn {
@@ -59,6 +61,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 #yes-btn {
@@ -69,9 +72,7 @@ body {
 #no-btn {
     background-color: #487b86;
     color: white;
-    /* জাভাস্ক্রিপ্ট দিয়ে মুভ করার জন্য এটি জরুরি */
-    position: absolute; 
-    transition: all 0.2s ease;
+    /* এখানে position: absolute; সরিয়ে দেওয়া হয়েছে যেন শুরুতে পাশাপাশি থাকে */
     z-index: 999;
-    touch-action: manipulation; /* মোবাইলে টাচ রেসপন্স ভালো করার জন্য */
+    touch-action: manipulation;
 }
